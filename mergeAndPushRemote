@@ -1,7 +1,8 @@
 #!/bin/bash -x
 read -p "enter branch name" branchname
 git add .
-git commit -m "adding $branchname"
+read -p "enter commit name" commitName
+git commit -m "adding $commitName"
 git checkout master
 git merge "$branchname"
 git checkout $branchname
